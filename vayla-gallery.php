@@ -1,15 +1,10 @@
-<?php
-$imageDirectory = 'https://cursedprograms.github.io/cursedentertainment/images/vayla/gallery/';
-$imageFiles = glob($imageDirectory . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>Vayla Varnica</title>
   <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="../../cursedFavicon.png">
+  <link rel="icon" type="image/png" href="https://cursedprograms.github.io/cursedentertainment/cursedFavicon.png">
   <link rel="stylesheet" type="text/css" href="https://cursedprograms.github.io/cursedentertainment/styles/main-style.css">
   <link rel="stylesheet" type="text/css" href="https://cursedprograms.github.io/cursedentertainment/styles/content-style.css">
   <link rel="stylesheet" type="text/css" href="https://cursedprograms.github.io/cursedentertainment/styles/horizontal-menu-style.css">
@@ -21,11 +16,13 @@ $imageFiles = glob($imageDirectory . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
     <div class="grid_container">
       <div class="horizontal-menu"> <br>
         <ul>
-          <li><a href="https://cursedprograms.github.io/cursedentertainment/pages/discographies/vayla-music.html">Music</a></li>
+          <li><a href="../../pages/discographies/vayla-music.html">Music</a></li>
         </ul>
       </div>
       <div class="grid">
         <?php
+        $imageDirectory = 'https://cursedprograms.github.io/cursedentertainment/images/vayla/gallery/';
+        $imageFiles = glob($imageDirectory . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
         foreach ($imageFiles as $index => $imageFile) {
           $altText = 'Varnica ' . ($index + 1);
           echo '<div class="grid-item"> <img src="' . $imageFile . '" alt="' . $altText . '"> </div>';
